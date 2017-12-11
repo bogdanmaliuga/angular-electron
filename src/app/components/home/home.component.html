@@ -1,5 +1,37 @@
+<div class="loader-wrap" *ngIf="!isFilesLoaded">
+  <span class="loader"></span>
+</div>
+<h3>{{total}}</h3>
 <div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+  <ngx-charts-line-chart *ngIf="isFilesLoaded"
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="multi"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [autoScale]="autoScale"
+    (select)="onSelect($event)">
+  </ngx-charts-line-chart>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>size,bytes</th>
+        <th>count,words</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let el of data | orderBy:'count':true">
+        <td>{{el.name}}</td>
+        <td>{{el.size}}</td>
+        <td>{{el.count}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

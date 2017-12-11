@@ -242,6 +242,7 @@ module.exports = {
   "externals": {
     "electron": "require('electron')",
     "buffer": "require('buffer')",
+    "bootstrap":"require('bootstrap')",
     "child_process": "require('child_process')",
     "crypto": "require('crypto')",
     "events": "require('events')",
@@ -251,6 +252,7 @@ module.exports = {
     "assert": "require('assert')",
     "dns": "require('dns')",
     "net": "require('net')",
+    "node-div":"require('node-dir')",
     "os": "require('os')",
     "path": "require('path')",
     "querystring": "require('querystring')",
