@@ -107,8 +107,8 @@ export class HomeComponent implements OnInit {
     );
   }
   checkFolder(){
-    console.log('sss');
-    dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']});
+    console.log('ssssssss');
+    dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']},filePaths => console.log(filePaths))
   }
   ngOnInit() {
     // this.readFilesFromDir();
