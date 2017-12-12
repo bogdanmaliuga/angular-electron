@@ -1,23 +1,9 @@
-<div class="loader-wrap" *ngIf="!isFilesLoaded">
+<!-- <div class="loader-wrap" *ngIf="!isFilesLoaded">
   <span class="loader"></span>
-</div>
+</div> -->
 <h3>{{total}}</h3>
 <div class="container">
-  <ngx-charts-line-chart *ngIf="isFilesLoaded"
-    [view]="view"
-    [scheme]="colorScheme"
-    [results]="multi"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel"
-    [autoScale]="autoScale"
-    (select)="onSelect($event)">
-  </ngx-charts-line-chart>
+  <button (click)="checkFolder()">Open Folder</button>
   <table class="table table-bordered">
     <thead>
       <tr>
